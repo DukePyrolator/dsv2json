@@ -2,6 +2,6 @@
 echo "Creating ELF binary..."
 g++ -Wall -ggdb -std=c++11 dsv2json.cpp jsoncpp.cpp -o dsv2json
 echo "Creating Win32 binary..."
-i686-w64-mingw32-g++ -Wall -std=c++11 -static-libgcc -static-libstdc++ dsv2json.cpp jsoncpp.cpp -o dsv2json32.exe
+i686-w64-mingw32-g++ -O3 -Wall -std=c++11 -static-libgcc -static-libstdc++ dsv2json.cpp jsoncpp.cpp -o dsv2json32.exe
 echo "Creating Win64 binary..."
-x86_64-w64-mingw32-g++ -m64 -Wall -std=c++11 -static-libgcc -static-libstdc++ dsv2json.cpp jsoncpp.cpp -o dsv2json64.exe
+x86_64-w64-mingw32-g++ -O3 -m64 -Wall -std=c++11 -static-libgcc -static-libstdc++ dsv2json.cpp jsoncpp.cpp -o dsv2json64.exe
